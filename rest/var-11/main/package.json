@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^5.21.2",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "jest --forceExit"
+  }
+}

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple app</title>
+    <script>
+        window.onload = async () => {
+            let btn = document.getElementById('reload')
+            let filter = document.getElementById('filter')
+
+            let tbl = document.getElementById('main')
+
+            let load = async (filter) => {
+                try{
+                    let rows = data.map((e) => `
+                        <tr>
+                            <td>
+                                ${e.name}
+                            </td>
+                            <td>
+                                ${e.color}
+                            </td>
+                        </tr>
+                    `)
+                    tbl.innerHTML = rows.join()
+                }
+                catch(err){
+                    console.warn(err)
+                }
+            }
+            load('')
+        }
+    </script>
+</head>
+<body>
+    A simple app
+    <input type="text" placeholder="filter" id="filter" />
+    <table id=main></table>
+</body>
+</html>
